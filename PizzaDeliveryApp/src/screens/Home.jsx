@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import LinearGradient from 'react-native-linear-gradient'
 
 const Home = () => {
     return (
         <View style={styles.container}>
-            <LinearGradient colors={["rgba(245, 49, 63, 1)", "rgba(255, 163, 96, 1)"]} style={styles.bannerDiv}
+            <LinearGradient
                 start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+                colors={["rgba(245, 49, 63, 1)", "rgba(255, 163, 96, 1)"]}
+                style={styles.bannerDiv}
             >
                 <Text style={styles.titleText}>
                     Hi Jaykey!
@@ -16,7 +18,34 @@ const Home = () => {
                 </Text>
             </LinearGradient>
             <View style={[styles.card, styles.reorderDiv]}>
-
+                <View style={styles.ImageDiv}>
+                    <Image
+                        source={require("../assets/pizzaImage.png")}
+                        style={styles.pizzaImage}
+                    />
+                </View>
+                <View style={styles.TextDiv}>
+                    <Text style={styles.reorderText}>
+                        Reorder again?
+                    </Text>
+                    <Text style={styles.text2}>
+                        Small, thin crust, tomatoes, basil, cheese
+                    </Text>
+                    <Text style={styles.prizeText}>
+                        $12
+                    </Text>
+                    <LinearGradient
+                        start={{ x: 0, y: 0 }} end={{ x: 1, y: 0 }}
+                        colors={["rgba(245, 49, 63, 1)", "rgba(255, 163, 96, 1)"]}
+                        style={styles.btnDiv}
+                    >
+                        <TouchableOpacity>
+                            <Text style={styles.btnText}>
+                                Add To Cart
+                            </Text>
+                        </TouchableOpacity>
+                    </LinearGradient>
+                </View>
             </View>
             <View style={[styles.card, styles.createPizzaDiv]}>
 
@@ -57,8 +86,11 @@ const styles = StyleSheet.create({
         flex: 0.4,
         position: 'relative',
         top: -30,
-        marginHorizontal: 10,
+        marginHorizontal: 14,
         zIndex: 2,
+        flexDirection: "row",
+        overflow: "hidden",
+        gap: 20
     },
     createPizzaDiv: {
         flex: 0.4,
@@ -74,6 +106,50 @@ const styles = StyleSheet.create({
         borderColor: "white",
         color: "white",
         marginBottom: 10,
+    },
+    ImageDiv: {
+        flex: 0.5,
+    },
+    pizzaImage: {
+        width: "120%",
+        height: "90%",
+        alignItems: "center",
+        objectFit: "contain",
+        position: "relative",
+        right: 20,
+    },
+    TextDiv: {
+        flex: 0.5,
+        justifyContent: "center",
+        gap: 6
+    },
+    reorderText: {
+        fontSize: 20,
+        fontWeight: "bold",
+        color: "red"
+    },
+    text2: {
+        fontSize: 14,
+        color: "rgba(109, 110, 156, 1)",
+        textTransform: "uppercase"
+    },
+    prizeText: {
+        color: "rgba(109, 110, 156, 1)",
+        fontSize: 18,
+        fontWeight: "bold"
+    },
+    btnDiv: {
+        width: "90%",
+        borderRadius: 20,
+        paddingHorizontal: 10,
+        paddingVertical: 8,
+        justifyContent: "center",
+        alignItems: "center",
+    },
+    btnText: {
+        color: "white",
+        fontSize: 16,
+        fontWeight: "bold"
     }
 })
 
