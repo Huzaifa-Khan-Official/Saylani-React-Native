@@ -48,7 +48,20 @@ const Home = () => {
                 </View>
             </View>
             <View style={[styles.card, styles.createPizzaDiv]}>
-
+                <View style={styles.createPizzaTextView}>
+                    <Text style={styles.createPizza1stText}>
+                        Create your <Text style={styles.fontBold}>own pizza</Text>
+                    </Text>
+                    <Text style={styles.createPizza2ndText}>
+                        The cost will depend on your customization
+                    </Text>
+                </View>
+                <View style={styles.createPizzaImageView}>
+                    <Image
+                        style={styles.createPizzaImage}
+                        source={require("../assets/pizzaImage.png")}
+                    />
+                </View>
             </View>
         </View>
     )
@@ -95,6 +108,7 @@ const styles = StyleSheet.create({
     createPizzaDiv: {
         flex: 0.4,
         marginHorizontal: 10,
+        paddingVertical: 10
     },
     fontBold: {
         fontWeight: 'bold',
@@ -150,6 +164,25 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 16,
         fontWeight: "bold"
+    },
+    createPizzaTextView: {
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    createPizza1stText: {
+        fontSize: 24,
+        color: "red"
+    },
+    createPizza2ndText: {
+        fontSize: 14,
+        color: "rgba(109, 110, 156, 1)"
+    },
+    createPizzaImageView: {
+        alignItems: "center"
+    },
+    createPizzaImage: {
+        width: "90%",
+        height: "90%"
     }
 })
 
