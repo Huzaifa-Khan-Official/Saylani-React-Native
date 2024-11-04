@@ -108,7 +108,8 @@ const styles = StyleSheet.create({
     createPizzaDiv: {
         flex: 0.4,
         marginHorizontal: 10,
-        paddingVertical: 10
+        paddingVertical: 10,
+        marginBottom: 20
     },
     fontBold: {
         fontWeight: 'bold',
@@ -178,11 +179,12 @@ const styles = StyleSheet.create({
         color: "rgba(109, 110, 156, 1)"
     },
     createPizzaImageView: {
-        alignItems: "center"
+        alignItems: "center",
+        paddingVertical: 10,
     },
     createPizzaImage: {
-        width: "90%",
-        height: "90%"
+        width: 210,
+        height: 210
     }
 })
 
