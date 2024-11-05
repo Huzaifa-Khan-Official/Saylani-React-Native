@@ -5,8 +5,9 @@ import Home from './screens/Home'
 const App = () => {
   return (
     <View style={styles.container}>
-      <StatusBar translucent backgroundColor="transparent"/>
+      <StatusBar translucent backgroundColor="transparent" />
       <Home />
+      {/* <AppNavigation /> */}
     </View>
   )
 }
