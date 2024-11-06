@@ -7,7 +7,6 @@ const App = () => {
     <View style={styles.container}>
       <StatusBar translucent backgroundColor="transparent" />
       <Home />
-      {/* <AppNavigation /> */}
     </View>
   )
 }
